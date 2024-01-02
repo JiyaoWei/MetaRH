@@ -17,7 +17,7 @@ The main idea of this model is to capture relation meta information from limited
 * ``Torch-scatter 2.0.8``
 
 ### The detail hyper-parameters
-|   Parameter   |  F-Wikipeople  |  F-JF17K  |  F-WDd50K  |
+|   Parameter   |  F-Wikipeople  |  F-JF17K  |  F-WD50K  |
 |  ----  | ----  | ----  | ----  |
 |  Embedding dim  | 100 | 100 | 100 |
 |  Batch size  | 1024 | 128 | 1024 |
