@@ -6,7 +6,7 @@ In this work, we attempt to automatically infer a missing entity in an n-ary fac
 
 ![image](https://github.com/JiyaoWei/FLEN/assets/43932741/076ba6fb-8546-4ce9-a6d8-f9a781668370)
 
-The main idea of this model is to capture relation meta information from limited support instances to predict a missing element in a query instance, as defined in ``models_flen.py``. We approach it from two angles. Firstly, even though the few-shot relations have limited instances, the entities involved have abundant background data, which helps to generate fewshot relation representations. Secondly, inspired by the success of meta-learning methods (Munkhdalai and Yu 2017; Finn, Abbeel, and Levine 2017) in the few-shot learning ﬁeld, we can adjust relation representations with loss gradients of the support instances to obtain the shared knowledge therein, which we refer to as relation meta information.
+The main idea of this model is to capture relation meta information from limited support instances to predict a missing element in a query instance, as defined in ``models_metarh.py``. We approach it from two angles. Firstly, even though the few-shot relations have limited instances, the entities involved have abundant background data, which helps to generate fewshot relation representations. Secondly, inspired by the success of meta-learning methods (Munkhdalai and Yu 2017; Finn, Abbeel, and Levine 2017) in the few-shot learning ﬁeld, we can adjust relation representations with loss gradients of the support instances to obtain the shared knowledge therein, which we refer to as relation meta information.
 
 ## Steps to run the experiments
 
