@@ -22,7 +22,7 @@ The main idea of this model is to capture relation meta information from limited
 |  Embedding dim  | 100 | 100 | 100 |
 |  Batch size  | 1024 | 128 | 1024 |
 |  Learning rate  | 1e-4 | 1e-4 | 1e-3 |
-|  Relation weight  | 0.9 | 0.9 | 0.1 |
+|  Relation weight  | 0.9 | 0.2 | 0.1 |
 |  Neighbor number  | 30 | 10 | 20 |
 |  Input dropout  | 0.5 | 0.5 | 0.5 |
 |  Transformer layer  | 2 | 2 | 2 |
@@ -33,7 +33,7 @@ The main idea of this model is to capture relation meta information from limited
 
 * On F-JF17K
 ```
-nohup python -u main_metarh.py --dataset F-JF17K --embed_dim 100 --seed 42 --embed_model HINGE --max_seq_length 9 --weight 0.9 --batch_size 128 --learning_rate 1e-4 --weight_decay 0 --dropout_i 0.5 --num_layers 2 --num_heads 4 --dropout_g 0.1 --max_neighbor 10 --qual_opn rotate --qual_n sum --qual_aggregate sum --epoch 300000 --eval_epoch 1000 --few_rel_aggregate mean --relation_learner gran --embedding_learner transe --shuffle_background 0 --early_stopping_patience 10 --use_neighbor 1 --use_pretrain 1 --use_in_train 1 --fine_tune 1 --few 5 --device 1 > log/jf17k_5_0.9_128_1e-4_0.5_2_4_0.1_10_rotate_sum_sum_300000_1000_mean_gran_transe_10_1_1_1_1_1 &
+nohup python -u main_metarh.py --dataset F-JF17K --embed_dim 100 --seed 42 --embed_model HINGE --max_seq_length 9 --weight 0.2 --batch_size 128 --learning_rate 1e-4 --weight_decay 0 --dropout_i 0.5 --num_layers 2 --num_heads 4 --dropout_g 0.1 --max_neighbor 10 --qual_opn rotate --qual_n sum --qual_aggregate sum --epoch 300000 --eval_epoch 1000 --few_rel_aggregate mean --relation_learner gran --embedding_learner transe --shuffle_background 0 --early_stopping_patience 10 --use_neighbor 1 --use_pretrain 1 --use_in_train 1 --fine_tune 1 --few 5 --device 1 > log/jf17k_5_0.2_128_1e-4_0.5_2_4_0.1_10_rotate_sum_sum_300000_1000_mean_gran_transe_10_1_1_1_1_1 &
 ```
 * On F-WD50K
 ```
